@@ -87,6 +87,7 @@ resource "null_resource" "deploy_app" {
       kubectl apply -f https://raw.githubusercontent.com/leandroscardua/windows-linux-aks-sample/main/database.yml
       kubectl apply -f https://raw.githubusercontent.com/leandroscardua/windows-linux-aks-sample/main/svc.yml
       until [[ $(kubectl get service/adventure-app --output=jsonpath='{.status.loadBalancer.ingress[0].ip}') ]]; do sleep 5; done
+      echo -e "AdventureWorks Public IP Address"
       kubectl describe services adventure-app | awk '/LoadBalancer Ingress:/ {print $3}'
 EOT
   }
