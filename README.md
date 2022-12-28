@@ -1,4 +1,7 @@
 # Create a AKS cluster with Azure AD Group Authentication using kubelogin
+
+![alt text](https://github.com/leandroscardua/terraform-aks-mixed/blob/main/AKS.jpg?raw=true)
+
 #
 #az login with terraform
 https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/guides/azure_cli
